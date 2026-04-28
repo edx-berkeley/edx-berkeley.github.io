@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+
+:root {
+  --background: #fafafa;
+  --foreground: #1a1a1a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-berkeley-blue: #003262;
+  --color-cal-gold: #fdb515;
+}
+
+html {
+  /* Minimal inset for hash links; sticky header (~56px) still covers if this is too small — tune here only */
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
