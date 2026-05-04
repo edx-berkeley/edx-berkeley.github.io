@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { CoursePageLayout } from "@/components/course-page-layout";
+import { PageCta } from "@/components/page-cta";
 
 export const metadata: Metadata = {
   title: "Data 88C (C88C): Computational Structures in Data Science",
@@ -271,6 +272,13 @@ export default function Data88CPage() {
           ),
         },
       ]}
+      cta={
+        <PageCta
+          title="Ready to enroll into Data 88C?"
+          buttonLabel="Enroll now"
+          href="https://www.edx.org/school/uc-berkeleyx"
+        />
+      }
     />
   );
 }

@@ -23,8 +23,8 @@ export function CourseLogo({ suffix, priority }: CourseLogoProps) {
             ? "Data 88C (C88C) logo"
             : `DATA88 wordmark for Data 88${suffix}`
         }
-        width={is88C ? 7100 : 1320}
-        height={is88C ? 168 : 96}
+        width={is88C ? 2100 : 1320}
+        height={is88C ? 2100 : 96}
         className={
           is88C
             ? "h-24 w-auto max-w-[min(100%,34rem)] sm:h-28 object-contain object-left"

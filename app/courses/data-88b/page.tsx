@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { CoursePageLayout } from "@/components/course-page-layout";
+import { PageCta } from "@/components/page-cta";
 
 export const metadata: Metadata = {
   title: "Data 88B: Structures for Data Science",
@@ -32,7 +33,7 @@ export default function Data88BPage() {
             <>
               <div className="space-y-6">
                 <div className="space-y-1">
-                  <p className="text-sm font-semibold tracking-wide text-zinc-700">DATA88B.1 — Data Exploration</p>
+                  <p className="text-sm font-semibold tracking-wide text-zinc-700">DATA88B.1: Data Exploration</p>
                   <p className="text-sm text-zinc-500">UC Berkeley</p>
                 </div>
 
@@ -50,23 +51,23 @@ export default function Data88BPage() {
                   <p>Part 1 (sometimes listed as 88.1X on edX) includes 5 modules:</p>
                   <ol className="list-decimal space-y-2 pl-5">
                     <li>
-                      <span className="font-medium text-zinc-800">Module 1: Competing with a Big Box Retailer</span> —
+                      <span className="font-medium text-zinc-800">Module 1: Competing with a Big Box Retailer</span>:
                       Framing decisions with data, managing datasets, and comparing strategies.
                     </li>
                     <li>
-                      <span className="font-medium text-zinc-800">Module 2: Probability &amp; Average</span> — Probability
+                      <span className="font-medium text-zinc-800">Module 2: Probability &amp; Average</span>: Probability
                       and the mean, when to use averages, and interpreting them in context.
                     </li>
                     <li>
-                      <span className="font-medium text-zinc-800">Module 3: Weighted Average</span> — Weighted averages,
+                      <span className="font-medium text-zinc-800">Module 3: Weighted Average</span>: Weighted averages,
                       choosing weights, and applications (e.g., airline reservations, surveys, reviews).
                     </li>
                     <li>
-                      <span className="font-medium text-zinc-800">Module 4: Data Visualization</span> — Plots and charts
+                      <span className="font-medium text-zinc-800">Module 4: Data Visualization</span>: Plots and charts
                       to explore data, communicate findings, and spot patterns or outliers.
                     </li>
                     <li>
-                      <span className="font-medium text-zinc-800">Module 5: Simulation</span> — Using simulation to model
+                      <span className="font-medium text-zinc-800">Module 5: Simulation</span>: Using simulation to model
                       uncertainty, test strategies, and support “what-if” decisions.
                     </li>
                   </ol>
@@ -77,14 +78,14 @@ export default function Data88BPage() {
                   <h3 className="text-lg font-semibold text-zinc-900">Structure and assignments</h3>
                   <ul className="space-y-2">
                     <li>
-                      <span className="font-medium text-zinc-800">Modules</span> — 5 content modules (plus “Succeeding in
+                      <span className="font-medium text-zinc-800">Modules</span>: 5 content modules (plus “Succeeding in
                       This Course” where applicable).
                     </li>
                     <li>
-                      <span className="font-medium text-zinc-800">Labs</span> — 3 Jupyter lab assignments.
+                      <span className="font-medium text-zinc-800">Labs</span>: 3 Jupyter lab assignments.
                     </li>
                     <li>
-                      <span className="font-medium text-zinc-800">Quizzes</span> — 1 quiz.
+                      <span className="font-medium text-zinc-800">Quizzes</span>: 1 quiz.
                     </li>
                   </ul>
                 </div>
@@ -99,7 +100,7 @@ export default function Data88BPage() {
               <div className="space-y-6">
                 <div className="space-y-1">
                   <p className="text-sm font-semibold tracking-wide text-zinc-700">
-                    DATA88B.2 — Inferential Statistics
+                    DATA88B.2: Inferential Statistics
                   </p>
                   <p className="text-sm text-zinc-500">UC Berkeley</p>
                 </div>
@@ -117,23 +118,23 @@ export default function Data88BPage() {
                   <p>Part 2 (sometimes listed as 88.2X on edX) includes 5 modules:</p>
                   <ol className="list-decimal space-y-2 pl-5">
                     <li>
-                      <span className="font-medium text-zinc-800">Module 6: One-sample t Hypothesis Test</span> —
+                      <span className="font-medium text-zinc-800">Module 6: One-sample t Hypothesis Test</span>:
                       One-sample t-tests, assumptions, p-values, and when the test is appropriate.
                     </li>
                     <li>
-                      <span className="font-medium text-zinc-800">Module 7: Two-sample t Hypothesis Test &amp; ANOVA Test</span>{" "}
-                      — Comparing two or more groups; two-sample t-tests and ANOVA.
+                      <span className="font-medium text-zinc-800">Module 7: Two-sample t Hypothesis Test &amp; ANOVA Test</span>:
+                      Comparing two or more groups; two-sample t-tests and ANOVA.
                     </li>
                     <li>
-                      <span className="font-medium text-zinc-800">Module 8: Confidence Interval</span> — Constructing and
+                      <span className="font-medium text-zinc-800">Module 8: Confidence Interval</span>: Constructing and
                       interpreting confidence intervals for means and proportions.
                     </li>
                     <li>
-                      <span className="font-medium text-zinc-800">Module 9: A/B Causality Test</span> — Designing and
+                      <span className="font-medium text-zinc-800">Module 9: A/B Causality Test</span>: Designing and
                       analyzing A/B tests; correlation vs. causation.
                     </li>
                     <li>
-                      <span className="font-medium text-zinc-800">Module 10: Chi-squared Test</span> — Testing
+                      <span className="font-medium text-zinc-800">Module 10: Chi-squared Test</span>: Testing
                       association between categorical variables; contingency tables.
                     </li>
                   </ol>
@@ -144,14 +145,14 @@ export default function Data88BPage() {
                   <h3 className="text-lg font-semibold text-zinc-900">Structure and assignments</h3>
                   <ul className="space-y-2">
                     <li>
-                      <span className="font-medium text-zinc-800">Modules</span> — 5 content modules (plus “Succeeding in
+                      <span className="font-medium text-zinc-800">Modules</span>: 5 content modules (plus “Succeeding in
                       This Course” where applicable).
                     </li>
                     <li>
-                      <span className="font-medium text-zinc-800">Labs</span> — 5 Jupyter lab assignments.
+                      <span className="font-medium text-zinc-800">Labs</span>: 5 Jupyter lab assignments.
                     </li>
                     <li>
-                      <span className="font-medium text-zinc-800">Quizzes</span> — 5 quizzes.
+                      <span className="font-medium text-zinc-800">Quizzes</span>: 5 quizzes.
                     </li>
                   </ul>
                 </div>
@@ -165,7 +166,7 @@ export default function Data88BPage() {
             <>
               <div className="space-y-6">
                 <div className="space-y-1">
-                  <p className="text-sm font-semibold tracking-wide text-zinc-700">DATA88B.3 — Linear Regression</p>
+                  <p className="text-sm font-semibold tracking-wide text-zinc-700">DATA88B.3: Linear Regression</p>
                   <p className="text-sm text-zinc-500">UC Berkeley</p>
                 </div>
 
@@ -182,19 +183,19 @@ export default function Data88BPage() {
                   <p>Part 3 (sometimes listed as 88.3X on edX) includes 4 modules:</p>
                   <ol className="list-decimal space-y-2 pl-5">
                     <li>
-                      <span className="font-medium text-zinc-800">Module 11: Linear Regression</span> — Fitting and
+                      <span className="font-medium text-zinc-800">Module 11: Linear Regression</span>: Fitting and
                       interpreting simple linear regression; R², residuals, prediction, and inference.
                     </li>
                     <li>
-                      <span className="font-medium text-zinc-800">Module 12: Non-linearity</span> — Multiple regression,
+                      <span className="font-medium text-zinc-800">Module 12: Non-linearity</span>: Multiple regression,
                       non-linear patterns, and interpreting coefficients.
                     </li>
                     <li>
-                      <span className="font-medium text-zinc-800">Module 13: Discontinuity, Trend, &amp; Seasonality</span>{" "}
-                      — Discontinuity, trend, seasonality; logistic regression for binary outcomes.
+                      <span className="font-medium text-zinc-800">Module 13: Discontinuity, Trend, &amp; Seasonality</span>:
+                      Discontinuity, trend, seasonality; logistic regression for binary outcomes.
                     </li>
                     <li>
-                      <span className="font-medium text-zinc-800">Module 14: Interaction</span> — Interaction terms in
+                      <span className="font-medium text-zinc-800">Module 14: Interaction</span>: Interaction terms in
                       regression, interpretation and visualization; introduction to clustering.
                     </li>
                   </ol>
@@ -205,14 +206,14 @@ export default function Data88BPage() {
                   <h3 className="text-lg font-semibold text-zinc-900">Structure and assignments</h3>
                   <ul className="space-y-2">
                     <li>
-                      <span className="font-medium text-zinc-800">Modules</span> — 4 content modules (plus “Succeeding in
+                      <span className="font-medium text-zinc-800">Modules</span>: 4 content modules (plus “Succeeding in
                       This Course” where applicable).
                     </li>
                     <li>
-                      <span className="font-medium text-zinc-800">Labs</span> — 4 Jupyter lab assignments.
+                      <span className="font-medium text-zinc-800">Labs</span>: 4 Jupyter lab assignments.
                     </li>
                     <li>
-                      <span className="font-medium text-zinc-800">Quizzes</span> — 4 quizzes.
+                      <span className="font-medium text-zinc-800">Quizzes</span>: 4 quizzes.
                     </li>
                   </ul>
                 </div>
@@ -221,6 +222,13 @@ export default function Data88BPage() {
           ),
         },
       ]}
+      cta={
+        <PageCta
+          title="Ready to enroll into Data 88B?"
+          buttonLabel="Enroll now"
+          href="https://www.edx.org/school/uc-berkeleyx"
+        />
+      }
     />
   );
 }

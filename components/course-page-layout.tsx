@@ -9,7 +9,7 @@ import { CourseSidebar } from "@/components/course-sidebar";
 import type { CourseTocPrefix } from "@/lib/course-toc";
 
 export type CoursePart = {
-  /** Visible heading for this block (e.g. “Part one: Foundations”). */
+  /** Visible heading for this block (e.g. "Part one: Foundations"). */
   title: string;
   content: ReactNode;
 };
@@ -26,8 +26,10 @@ export type CoursePageLayoutProps = {
   overview: ReactNode;
   /** Three main content areas in order. */
   parts: [CoursePart, CoursePart, CoursePart];
+  /** Optional enrollment/action block rendered at the end of the page body. */
+  cta?: ReactNode;
   /**
-   * When true (default), the right “On this page” panel scrolls inside a max-height column (scrollbar).
+   * When true (default), the right "On this page" panel scrolls inside a max-height column (scrollbar).
    * Set false to let the TOC grow with the page so only the document scrolls.
    */
   sidebarIndependentScroll?: boolean;
@@ -40,6 +42,7 @@ export function CoursePageLayout({
   tocPrefix,
   overview,
   parts,
+  cta,
   sidebarIndependentScroll = true,
 }: CoursePageLayoutProps) {
   const [p1, p2, p3] = parts;
@@ -68,7 +71,7 @@ export function CoursePageLayout({
           <CourseLogo suffix={logoSuffix} priority />
         </header>
 
-        <section aria-labelledby="overview-heading" className="mt-14">
+        <section aria-labelledby="overview-heading" className="section-surface-soft mt-14 rounded-2xl px-6 py-8 sm:px-8">
           <h2 id="overview-heading" className="font-sans text-2xl font-semibold text-zinc-950">
             Overview
           </h2>
@@ -77,15 +80,17 @@ export function CoursePageLayout({
 
         <Separator className="my-14" />
 
-        <CoursePartSection index={1} part={p1} />
+        <CoursePartSection index={1} part={p1} className="section-surface-muted rounded-2xl px-6 py-8 sm:px-8" />
 
         <Separator className="my-14" />
 
-        <CoursePartSection index={2} part={p2} />
+        <CoursePartSection index={2} part={p2} className="section-surface-soft rounded-2xl px-6 py-8 sm:px-8" />
 
         <Separator className="my-14" />
 
-        <CoursePartSection index={3} part={p3} />
+        <CoursePartSection index={3} part={p3} className="section-surface-muted rounded-2xl px-6 py-8 sm:px-8" />
+
+        {cta ? <div className="mt-14">{cta}</div> : null}
       </main>
 
       <aside className="hidden w-56 shrink-0 xl:block">
@@ -103,12 +108,20 @@ export function CoursePageLayout({
   );
 }
 
-function CoursePartSection({ index, part }: { index: 1 | 2 | 3; part: CoursePart }) {
+function CoursePartSection({
+  index,
+  part,
+  className,
+}: {
+  index: 1 | 2 | 3;
+  part: CoursePart;
+  className?: string;
+}) {
   const sectionId = `course-part-${index}`;
   const headingId = `${sectionId}-heading`;
 
   return (
-    <section id={sectionId} aria-labelledby={headingId}>
+    <section id={sectionId} aria-labelledby={headingId} className={className}>
       <h2 id={headingId} className="font-sans text-2xl font-semibold text-zinc-950">
         {part.title}
       </h2>

@@ -1,4 +1,5 @@
 import NextLink from "next/link";
+import Image from "next/image";
 
 import type { CourseNavItem } from "@/lib/course-nav";
 
@@ -9,8 +10,18 @@ export function SiteHeader({ navLinks }: { navLinks: CourseNavItem[] }) {
   return (
     <header className="sticky top-0 z-40 border-b border-black/10 bg-white/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6">
-        <NextLink href="/" className="font-semibold tracking-tight text-[#003262] hover:underline hover:underline-offset-4">
-          Berkeley Data Science Courses — edX companion
+        <NextLink href="/" className="inline-flex items-center gap-3">
+          <Image
+            src="/berkeleyX.png"
+            alt="BerkeleyX"
+            width={180}
+            height={60}
+            className="h-10 w-auto"
+            priority
+          />
+          <span className="font-semibold tracking-tight text-[#003262] hover:underline hover:underline-offset-4">
+            Berkeley Data Science Courses - edX companion
+          </span>
         </NextLink>
         <nav aria-label="Courses" className="flex flex-wrap items-center gap-1">
           {navLinks.map((c) => (
