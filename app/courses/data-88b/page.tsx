@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 
 import { CoursePageLayout } from "@/components/course-page-layout";
 import { PageCta } from "@/components/page-cta";
+import { BERKELEYX_SCHOOL_URL } from "@/lib/course-nav";
 
 export const metadata: Metadata = {
-  title: "Data 88B: Structures for Data Science",
+  title: "Data 88B: Data and Decisions",
   description:
-    "Data 88B focuses on computational structures and program design for data science, aligned with Berkeley modular DS and the edX arc.",
+    "Data 88B focuses on data-driven decision making, inference, and regression in the Berkeley-aligned edX sequence.",
 };
 
 export default function Data88BPage() {
@@ -16,6 +17,7 @@ export default function Data88BPage() {
       navLabel="88B"
       logoSuffix="B"
       tocPrefix="data88b"
+      enrollHref={BERKELEYX_SCHOOL_URL}
       overview={
         <>
           <p>
@@ -224,9 +226,11 @@ export default function Data88BPage() {
       ]}
       cta={
         <PageCta
+          eyebrow="Enrollment"
           title="Ready to enroll into Data 88B?"
+          description="Begin with BerkeleyX on edX and continue through all three 88B parts."
           buttonLabel="Enroll now"
-          href="https://www.edx.org/school/uc-berkeleyx"
+          href={BERKELEYX_SCHOOL_URL}
         />
       }
     />

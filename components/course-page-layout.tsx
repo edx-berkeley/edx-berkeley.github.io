@@ -1,7 +1,9 @@
 import type { ReactNode } from "react";
 import NextLink from "next/link";
 
+import { cn } from "@heroui/react";
 import { Separator } from "@heroui/react";
+import { buttonVariants } from "@heroui/styles";
 
 import { CourseLogo } from "@/components/course-logo";
 import { CoursePartsNav } from "@/components/course-parts-nav";
@@ -26,6 +28,8 @@ export type CoursePageLayoutProps = {
   overview: ReactNode;
   /** Three main content areas in order. */
   parts: [CoursePart, CoursePart, CoursePart];
+  /** Primary enrollment URL for this course page. */
+  enrollHref: string;
   /** Optional enrollment/action block rendered at the end of the page body. */
   cta?: ReactNode;
   /**
@@ -42,6 +46,7 @@ export function CoursePageLayout({
   tocPrefix,
   overview,
   parts,
+  enrollHref,
   cta,
   sidebarIndependentScroll = true,
 }: CoursePageLayoutProps) {
@@ -52,7 +57,7 @@ export function CoursePageLayout({
       <main className="min-w-0 flex-1">
         <nav className="flex flex-wrap items-center justify-between gap-4 text-sm text-zinc-500">
           <div>
-            <NextLink href="/" className="font-medium text-[#003262] hover:underline">
+            <NextLink href="/" className="berkeley-focus-ring rounded font-medium text-[#003262] hover:underline">
               Home
             </NextLink>
             <span className="mx-2">/</span>
@@ -63,10 +68,26 @@ export function CoursePageLayout({
           </div>
         </nav>
 
-        <header className="mt-10 flex flex-col gap-8 border-b border-black/10 pb-12 lg:flex-row lg:items-end lg:justify-between">
+        <header className="mt-10 flex flex-col gap-8 border-b border-[#003262]/10 pb-12 lg:flex-row lg:items-end lg:justify-between">
           <div className="min-w-0 flex-1">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#003262]">Berkeley Data Science</p>
             <h1 className="mt-3 font-sans text-3xl font-semibold tracking-tight text-zinc-950 sm:text-4xl">{title}</h1>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href={enrollHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn(buttonVariants({ variant: "primary" }), "berkeley-focus-ring")}
+              >
+                Enroll on edX
+              </a>
+              <a
+                href="#overview-heading"
+                className="berkeley-outline-button berkeley-focus-ring inline-flex items-center rounded-lg px-3.5 py-2 text-sm font-semibold"
+              >
+                Preview curriculum
+              </a>
+            </div>
           </div>
           <CourseLogo suffix={logoSuffix} priority />
         </header>

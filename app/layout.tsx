@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-[#fafafa] font-sans text-zinc-900">
+      <body className="berkeley-shell min-h-full flex flex-col font-sans text-zinc-900">
         <SiteHeader navLinks={courseNav} />
         <div className="flex flex-1 flex-col">{children}</div>
         <SiteFooter />

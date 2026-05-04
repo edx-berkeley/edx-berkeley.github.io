@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 
 import { CoursePageLayout } from "@/components/course-page-layout";
 import { PageCta } from "@/components/page-cta";
+import { BERKELEYX_SCHOOL_URL } from "@/lib/course-nav";
 
 export const metadata: Metadata = {
-  title: "Data 88E: Economic Models",
+  title: "Data 88E: Data Science for Economics",
   description:
     "Data 88E connects data science to economics and policy, with materials aligned to the edX offering and Berkeley modular data science.",
 };
@@ -16,7 +17,7 @@ export default function Data88EPage() {
       navLabel="88E"
       logoSuffix="E"
       tocPrefix="data88e"
-      sidebarIndependentScroll={false}
+      enrollHref={BERKELEYX_SCHOOL_URL}
       overview={
         <>
           <p>
@@ -221,9 +222,11 @@ export default function Data88EPage() {
       ]}
       cta={
         <PageCta
+          eyebrow="Enrollment"
           title="Ready to enroll into Data 88E?"
+          description="Start on BerkeleyX and follow the economics-focused three-part pathway."
           buttonLabel="Enroll now"
-          href="https://www.edx.org/school/uc-berkeleyx"
+          href={BERKELEYX_SCHOOL_URL}
         />
       }
     />

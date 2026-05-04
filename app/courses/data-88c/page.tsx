@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { CoursePageLayout } from "@/components/course-page-layout";
 import { PageCta } from "@/components/page-cta";
+import { BERKELEYX_SCHOOL_URL } from "@/lib/course-nav";
 
 export const metadata: Metadata = {
   title: "Data 88C (C88C): Computational Structures in Data Science",
@@ -16,10 +17,11 @@ export default function Data88CPage() {
       navLabel="88C"
       logoSuffix="C"
       tocPrefix="data88c"
+      enrollHref={BERKELEYX_SCHOOL_URL}
       overview={
         <>
           <p>
-          C88C introduces computational thinking and programming concepts specifically tailored for data science applications. The course covers fundamental programming constructs, data structures, algorithms, and computational problem-solving techniques. Students learn Python programming with a focus on data manipulation, analysis, and visualization. Topics include variables, control structures, functions, lists, dictionaries, and basic algorithms. This course provides the computational foundation necessary for data science work and serves as a bridge between general programming and data-specific applications.
+          C88C introduces computational thinking and programming concepts specifically tailored for data science applications. The course covers fundamental programming constructs, data structures, algorithms, and computational problem-solving techniques. Students learn Python programming with a focus on data manipulation, analysis, and visualization. Topics include variables, control structures, functions, lists, dictionaries, and basic algorithms. This course provides the computational foundation necessary for data science work and serves as a bridge between general programming and data-specific applications. It can be taken for free (audit) or with a verified certificate.
           </p>
           <p>
           This edX course is based on UC Berkeley’s Data C88C: Computational Structures in Data Science. The official Berkeley course website is{" "}
@@ -274,9 +276,11 @@ export default function Data88CPage() {
       ]}
       cta={
         <PageCta
+          eyebrow="Enrollment"
           title="Ready to enroll into Data 88C?"
+          description="Start with BerkeleyX on edX and build the computational foundation for data science."
           buttonLabel="Enroll now"
-          href="https://www.edx.org/school/uc-berkeleyx"
+          href={BERKELEYX_SCHOOL_URL}
         />
       }
     />

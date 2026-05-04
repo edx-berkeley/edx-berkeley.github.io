@@ -11,7 +11,7 @@ export function CourseCardArtwork({ shortCode, priority }: CourseCardArtworkProp
 
   return (
     <div className="section-surface-soft flex aspect-[16/10] w-full items-center justify-center px-4 py-5">
-      <CourseLogo suffix={suffix} priority={priority} />
+      <CourseLogo suffix={suffix} priority={priority} compact />
     </div>
   );
 }

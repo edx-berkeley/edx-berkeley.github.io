@@ -2,8 +2,16 @@
 @import "@heroui/styles";
 
 :root {
-  --background: #fafafa;
-  --foreground: #1a1a1a;
+  --background: #f4f7fb;
+  --foreground: #1f2937;
+  --surface: #ffffff;
+  --surface-muted: #eef3fb;
+  --berkeley-blue-700: #00274c;
+  --berkeley-blue-600: #003262;
+  --berkeley-blue-500: #004b8d;
+  --cal-gold-500: #fdb515;
+  --cal-gold-600: #c4820e;
+  --ring-soft: rgba(0, 50, 98, 0.15);
 }
 
 @theme inline {
@@ -25,14 +33,61 @@ body {
   color: var(--foreground);
 }
 
+.berkeley-shell {
+  background:
+    radial-gradient(circle at top right, rgba(253, 181, 21, 0.12), transparent 35%),
+    radial-gradient(circle at top left, rgba(0, 50, 98, 0.08), transparent 45%),
+    var(--background);
+}
+
 .section-surface-soft {
-  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  background: linear-gradient(180deg, var(--surface) 0%, #f7faff 100%);
+  border: 1px solid rgba(0, 50, 98, 0.08);
+  box-shadow: 0 12px 30px -26px rgba(0, 0, 0, 0.45);
 }
 
 .section-surface-muted {
-  background: linear-gradient(180deg, #f5f8fc 0%, #ffffff 100%);
+  background: linear-gradient(180deg, var(--surface-muted) 0%, #ffffff 100%);
+  border: 1px solid rgba(0, 50, 98, 0.08);
+  box-shadow: 0 12px 30px -26px rgba(0, 0, 0, 0.4);
 }
 
 .section-surface-strong {
-  background: linear-gradient(180deg, #eef4ff 0%, #f8fbff 100%);
+  background: linear-gradient(180deg, #e8f1ff 0%, #f5f9ff 100%);
+  border: 1px solid rgba(0, 50, 98, 0.14);
+  box-shadow: 0 20px 32px -28px rgba(0, 50, 98, 0.5);
+}
+
+.berkeley-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 50, 98, 0.15);
+  background: rgba(255, 255, 255, 0.88);
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--berkeley-blue-600);
+}
+
+.berkeley-outline-button {
+  border-radius: 0.75rem;
+  border: 1px solid rgba(0, 50, 98, 0.24);
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--berkeley-blue-600);
+  transition: all 180ms ease;
+}
+
+.berkeley-outline-button:hover {
+  border-color: rgba(0, 50, 98, 0.5);
+  background: #ffffff;
+}
+
+.berkeley-highlight {
+  background: linear-gradient(120deg, rgba(253, 181, 21, 0.27), rgba(253, 181, 21, 0.03));
+}
+
+.berkeley-focus-ring:focus-visible {
+  outline: 2px solid var(--ring-soft);
+  outline-offset: 2px;
 }
